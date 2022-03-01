@@ -20,14 +20,6 @@
   "author": "Ste Shi",
   "license": "ISC",
   "homepage": "",
-  "babel": {
-		"presets": [
-		"@babel/preset-env"
-		],
-		"plugins": [
-		"babel-plugin-transform-import-meta"
-		]
-  	},
   "dependencies": {
     "bootstrap": "^4.6.0",
     "core-js": "^3.12.1",
