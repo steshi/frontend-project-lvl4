@@ -4,7 +4,7 @@ import 'core-js/stable/index.js';
 import 'regenerator-runtime/runtime.js';
 
 import '../assets/application.scss';
-import runApp from './init.js';
+import App from './init.js';
 
 if (process.env.NODE_ENV !== 'production') {
   localStorage.debug = 'chat:*';
@@ -31,4 +31,4 @@ if (process.env.NODE_ENV !== 'production') {
 
 // console.log('it works!');
 
-runApp();
+App();
