@@ -2,13 +2,26 @@
 
 import 'core-js/stable/index.js';
 import 'regenerator-runtime/runtime.js';
-
 import '../assets/application.scss';
+
+import React from 'react';
+import ReactDOM from 'react-dom';
 import App from './init.js';
 
 if (process.env.NODE_ENV !== 'production') {
   localStorage.debug = 'chat:*';
 }
+
+
+const mountNode = document.getElementById('chat');
+ReactDOM.render(<App />, mountNode);
+
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
 
 // const p = document.createElement('p');
 // p.classList.add('card-text');
@@ -30,5 +43,3 @@ if (process.env.NODE_ENV !== 'production') {
 // container.append(card);
 
 // console.log('it works!');
-
-App();
