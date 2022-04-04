@@ -7,6 +7,7 @@ import {
   Link,
   useLocation
 } from "react-router-dom";
+import Hello from "./elements/login";
 
 export default function App() {
   return (
@@ -30,7 +31,7 @@ export default function App() {
             <Home />
           </Route>
           <Route path="/login">
-            <Login />
+            <Hello />
           </Route>
           <Route path="*">
             <NoMatch />
@@ -45,9 +46,9 @@ function Home() {
   return <h2>Home</h2>;
 }
 
-function Login() {
-  return <h2>LLogin</h2>;
-}
+// function Login() {
+//   return <h2>LLogin</h2>;
+// }
 
 function NoMatch() {
   let location = useLocation();
