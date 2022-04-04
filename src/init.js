@@ -31,6 +31,9 @@ export default function App() {
           <Route path="/">
             <Home />
           </Route>
+          <Route path="*">
+            <NoMatch />
+          </Route>
         </Switch>
       </div>
     </Router>
@@ -43,4 +46,19 @@ function Home() {
 
 function Login() {
   return <h2>LLogin</h2>;
+}
+
+function NoMatch() {
+  let location = useLocation();
+
+  return (
+    <div>
+      <h1>
+        404
+      </h1>
+      <h3>
+        Oops.No match for <code>{location.pathname}</code>
+      </h3>
+    </div>
+  );
 }
